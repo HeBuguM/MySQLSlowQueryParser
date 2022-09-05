@@ -57,7 +57,7 @@ class Entry extends \PHPFUI\MySQLSlowQuery\BaseObject
 			}
 
 		if (\strpos($line, 'Time')){
-			$line = \preg_replace('/(\d{2})(\d{2})(\d{2})(\s{1,})/', '20\1-\2-\3\T', $line);
+			$line = \preg_replace('/(\d{2})(\d{2})(\d{2})(\s{1,})/', '20\1-\2-\3T', $line);
 			}
 
 		$parts = \explode(' ', \substr($line, 2));
