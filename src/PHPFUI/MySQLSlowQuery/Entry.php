@@ -57,7 +57,7 @@ class Entry extends \PHPFUI\MySQLSlowQuery\BaseObject
 			}
 
 		if (\strpos($line, 'Time')){
-			$line = \str_replace('  ', '-', $line);
+			$line = \str_replace(' ', '-', $line);
 			}
 
 		$parts = \explode(' ', \substr($line, 2));
