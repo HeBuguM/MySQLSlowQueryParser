@@ -116,6 +116,8 @@ class Parser
 
 	private function getNextLine()
 		{
+
+			
 		if ($this->extraLines)
 			{
 			return \array_shift($this->extraLines);
@@ -160,7 +162,8 @@ class Parser
 				$entry->setFromLine($line);
 				$entry->setFromLine(\fgets($this->handle));
 				$entry->setFromLine(\fgets($this->handle));
-
+				$entry->setFromLine(\fgets($this->handle));
+				$entry->setFromLine(\fgets($this->handle));	
 				$query = [];
 
 				while (\strlen($line = $this->getNextLine()) && '#' !== $line[0])
@@ -179,7 +182,10 @@ class Parser
 
 						break;
 						}
-					$query[] = \trim($line);
+
+
+						$query[] = \trim($line);
+
 					}
 
 				if (\strlen($line) && '#' === $line[0])
